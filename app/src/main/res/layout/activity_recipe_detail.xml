@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 1. Recipe Header Image -->
+        <ImageView
+            android:id="@+id/iv_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Recipe Header Image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 2. Recipe Title -->
+            <TextView
+                android:id="@+id/tv_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <!-- 3. Meta Information Badges (Category & Cuisine Area) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tv_detail_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFE082"
+                    android:textColor="#E65100"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="bold"
+                    android:text="Category" />
+
+                <TextView
+                    android:id="@+id/tv_detail_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#C8E6C9"
+                    android:textColor="#1B5E20"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textStyle="bold"
+                    android:text="Cuisine Classic" />
+            </LinearLayout>
+
+            <!-- 4. NEW FEATURE: Save / Remove Favorite Action Button -->
+            <Button
+                android:id="@+id/btn_favorite_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:text="Save to Favorites"
+                android:backgroundTint="#FF9800"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <!-- 5. Instructions Heading -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instructions / Execution Steps"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="#333333"/>
+
+            <!-- 6. Instructions Content Text Area -->
+            <TextView
+                android:id="@+id/tv_detail_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="#555555" />
+
+            <!-- 7. YouTube Video Button Link (Optional UI Extension) -->
+            <Button
+                android:id="@+id/btn_youtube"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:text="Watch Video Guide on YouTube"
+                android:backgroundTint="#FF0000"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤖 AI Recipe Assistant"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type what ingredients you have, and I will find recipes for you!"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Ingredient Input Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/et_ai_ingredients"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="e.g. chicken, potato, cheese..."
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:inputType="text"
+            android:imeOptions="actionDone"/>
+
+        <Button
+            android:id="@+id/btn_ai_search"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Ask AI"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9800"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- AI Suggestion Header -->
+    <TextView
+        android:id="@+id/tv_ai_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matching Recipes Found:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Results Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ai_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"/>
+
+</LinearLayout>
